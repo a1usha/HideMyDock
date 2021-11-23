@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DBA114D73F3F2C1B9E577F7 /* HideMyDockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA13154D83A299F8F43776 /* HideMyDockTests.swift */; };
+		2DBA13DF4B11853AC7301413 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1E5CB83B183D7FFB19EC /* Preview Assets.xcassets */; };
+		2DBA161C7F66DC4A027F464F /* HideMyDockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA10D50F51D9F8A3339D24 /* HideMyDockUITests.swift */; };
+		2DBA17E8BC2F711FF873B8DA /* HideMyDockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA11BC8C3DE69576B3D51F /* HideMyDockApp.swift */; };
+		2DBA1DA65313568913DC852D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */; };
+		2DBA1E293860376FFAABF52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1446AB68795FCEB4F37F /* Assets.xcassets */; };
+		2DBA1F72145DB84B840CA4C0 /* HideMyDockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1A98D9663939191567F0 /* HideMyDockUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DBA1C4899E671F303A58B62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DBA1A6241EB4336231BFBDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DBA1429559477A05C607305;
+			remoteInfo = HideMyDock;
+		};
+		2DBA1C6427BE6E56AC3E7378 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DBA1A6241EB4336231BFBDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DBA1429559477A05C607305;
+			remoteInfo = HideMyDock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DBA10D50F51D9F8A3339D24 /* HideMyDockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideMyDockUITests.swift; sourceTree = "<group>"; };
+		2DBA11BC8C3DE69576B3D51F /* HideMyDockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideMyDockApp.swift; sourceTree = "<group>"; };
+		2DBA13154D83A299F8F43776 /* HideMyDockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideMyDockTests.swift; sourceTree = "<group>"; };
+		2DBA1446AB68795FCEB4F37F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DBA16B5741BEAE1C85801F3 /* HideMyDockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HideMyDockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBA1866605C948386D276D3 /* HideMyDock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HideMyDock.entitlements; sourceTree = "<group>"; };
+		2DBA1A98D9663939191567F0 /* HideMyDockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideMyDockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2DBA1E5CB83B183D7FFB19EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2DBA1F5CD4321F6A273D1DA6 /* HideMyDockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HideMyDockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DBA1F9C6354AEB4F358BBED /* HideMyDock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HideMyDock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD0C5AE274D3AC400F6D412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DBA135CBF594E4FFC5E6DA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBA138ADF015CF193210852 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBA175B9CE02E44ED20676A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DBA11104FD6D37DA9692E74 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA1E5CB83B183D7FFB19EC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2DBA15E675E58E287EC7EE4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA1F9C6354AEB4F358BBED /* HideMyDock.app */,
+				2DBA1F5CD4321F6A273D1DA6 /* HideMyDockTests.xctest */,
+				2DBA16B5741BEAE1C85801F3 /* HideMyDockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DBA18569CEE1491B66EF794 = {
+			isa = PBXGroup;
+			children = (
+				2DBA15E675E58E287EC7EE4C /* Products */,
+				2DBA1C333D194226EC0C61A8 /* HideMyDock */,
+				2DBA1EC1F4408A76FAB6C454 /* HideMyDockTests */,
+				2DBA1ECCB554220E36662FD3 /* HideMyDockUITests */,
+			);
+			sourceTree = "<group>";
+		};
+		2DBA1C333D194226EC0C61A8 /* HideMyDock */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0C5AE274D3AC400F6D412 /* Info.plist */,
+				2DBA1446AB68795FCEB4F37F /* Assets.xcassets */,
+				2DBA1866605C948386D276D3 /* HideMyDock.entitlements */,
+				2DBA11104FD6D37DA9692E74 /* Preview Content */,
+				2DBA11BC8C3DE69576B3D51F /* HideMyDockApp.swift */,
+				2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */,
+			);
+			path = HideMyDock;
+			sourceTree = "<group>";
+		};
+		2DBA1EC1F4408A76FAB6C454 /* HideMyDockTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA13154D83A299F8F43776 /* HideMyDockTests.swift */,
+			);
+			path = HideMyDockTests;
+			sourceTree = "<group>";
+		};
+		2DBA1ECCB554220E36662FD3 /* HideMyDockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA10D50F51D9F8A3339D24 /* HideMyDockUITests.swift */,
+				2DBA1A98D9663939191567F0 /* HideMyDockUITestsLaunchTests.swift */,
+			);
+			path = HideMyDockUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DBA1429559477A05C607305 /* HideMyDock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBA10D7DFB41DC43C7BE4A5 /* Build configuration list for PBXNativeTarget "HideMyDock" */;
+			buildPhases = (
+				2DBA13E9F064E2484AF6E3AD /* Sources */,
+				2DBA175B9CE02E44ED20676A /* Frameworks */,
+				2DBA1A9074F0085AE1817BB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HideMyDock;
+			productName = HideMyDock;
+			productReference = 2DBA1F9C6354AEB4F358BBED /* HideMyDock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DBA14E33E9F48DD14A09FD9 /* HideMyDockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBA1E800C5F615C781B58E2 /* Build configuration list for PBXNativeTarget "HideMyDockUITests" */;
+			buildPhases = (
+				2DBA170387A88A37ABE83A87 /* Sources */,
+				2DBA138ADF015CF193210852 /* Frameworks */,
+				2DBA1AE7FF21B13046BE5159 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DBA16A9162CDB816CD4F465 /* PBXTargetDependency */,
+			);
+			name = HideMyDockUITests;
+			productName = HideMyDockUITests;
+			productReference = 2DBA16B5741BEAE1C85801F3 /* HideMyDockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		2DBA1FFCDDEDB4FC86D44043 /* HideMyDockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBA1FDFB480538AC6284EE5 /* Build configuration list for PBXNativeTarget "HideMyDockTests" */;
+			buildPhases = (
+				2DBA14D4EF5DCAE3C44661F0 /* Sources */,
+				2DBA135CBF594E4FFC5E6DA4 /* Frameworks */,
+				2DBA1526FD661B6BD0FDFE30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DBA124EC488F56950B81B2B /* PBXTargetDependency */,
+			);
+			name = HideMyDockTests;
+			productName = HideMyDockTests;
+			productReference = 2DBA1F5CD4321F6A273D1DA6 /* HideMyDockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DBA1A6241EB4336231BFBDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 2DBA1F46897B07E10E0B113B /* Build configuration list for PBXProject "HideMyDock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = 2DBA18569CEE1491B66EF794;
+			productRefGroup = 2DBA15E675E58E287EC7EE4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DBA1429559477A05C607305 /* HideMyDock */,
+				2DBA1FFCDDEDB4FC86D44043 /* HideMyDockTests */,
+				2DBA14E33E9F48DD14A09FD9 /* HideMyDockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DBA1526FD661B6BD0FDFE30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBA1A9074F0085AE1817BB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBA1E293860376FFAABF52E /* Assets.xcassets in Resources */,
+				2DBA13DF4B11853AC7301413 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBA1AE7FF21B13046BE5159 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DBA13E9F064E2484AF6E3AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBA17E8BC2F711FF873B8DA /* HideMyDockApp.swift in Sources */,
+				2DBA1DA65313568913DC852D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBA14D4EF5DCAE3C44661F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBA114D73F3F2C1B9E577F7 /* HideMyDockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBA170387A88A37ABE83A87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBA161C7F66DC4A027F464F /* HideMyDockUITests.swift in Sources */,
+				2DBA1F72145DB84B840CA4C0 /* HideMyDockUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DBA124EC488F56950B81B2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DBA1429559477A05C607305 /* HideMyDock */;
+			targetProxy = 2DBA1C4899E671F303A58B62 /* PBXContainerItemProxy */;
+		};
+		2DBA16A9162CDB816CD4F465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DBA1429559477A05C607305 /* HideMyDock */;
+			targetProxy = 2DBA1C6427BE6E56AC3E7378 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2DBA15016A3A0CEB01C6E71C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HideMyDock/HideMyDock.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HideMyDock/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HideMyDock/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2DBA15E29D0FA3BE4EC45257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HideMyDock/HideMyDock.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HideMyDock/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HideMyDock/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2DBA16768564C37F8CA21506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = HideMyDock;
+			};
+			name = Debug;
+		};
+		2DBA17EB22E5F90E35BAE3A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DBA181E1C3EB9AC6DE6FA11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		2DBA18FDF156CE61A7075627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HideMyDock.app/Contents/MacOS/HideMyDock";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		2DBA19D83B3DCE6A26B763B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = HideMyDock;
+			};
+			name = Release;
+		};
+		2DBA1B0FFE9DD770577A6148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HideMyDock.app/Contents/MacOS/HideMyDock";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DBA10D7DFB41DC43C7BE4A5 /* Build configuration list for PBXNativeTarget "HideMyDock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBA15016A3A0CEB01C6E71C /* Debug */,
+				2DBA15E29D0FA3BE4EC45257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBA1E800C5F615C781B58E2 /* Build configuration list for PBXNativeTarget "HideMyDockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBA16768564C37F8CA21506 /* Debug */,
+				2DBA19D83B3DCE6A26B763B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBA1F46897B07E10E0B113B /* Build configuration list for PBXProject "HideMyDock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBA17EB22E5F90E35BAE3A4 /* Debug */,
+				2DBA181E1C3EB9AC6DE6FA11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBA1FDFB480538AC6284EE5 /* Build configuration list for PBXNativeTarget "HideMyDockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBA18FDF156CE61A7075627 /* Debug */,
+				2DBA1B0FFE9DD770577A6148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DBA1A6241EB4336231BFBDC /* Project object */;
+}
