@@ -63,46 +63,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func spaceChange(_ sender: Any?) {
-//        enableDockAutoHide?.executeAndReturnError(nil)
+        let utils = Utils()
         
-//        do {
-//            try print(safeShell("defaults read com.apple.spaces"))
-//        } catch {
-//
-//        }
-//        let defaults = UserDefaults()
-//        defaults.addSuite(named: <#T##String#>)
-        
-        if let theDefaults = UserDefaults(suiteName: "com.apple.spaces") {
-            theDefaults.synchronize()
-            
-            let spacesDisplayConfiguration = theDefaults.dictionary(forKey: "SpacesDisplayConfiguration")
-            let managementData = spacesDisplayConfiguration?["Management Data"] as! [String : Any?]
-            let monitors = managementData["Monitors"] as! NSArray
-            let currentSpace = (monitors[0] as? [String : Any?])!["Current Space"]
-            
-            
-            print(currentSpace)
-        }
-    }
-    
-    func safeShell(_ command: String) throws -> String {
-        let task = Process()
-        let pipe = Pipe()
-        
-        task.standardOutput = pipe
-        task.standardError = pipe
-        task.arguments = ["-c", command]
-        task.executableURL = URL(fileURLWithPath: "/bin/zsh") //<--updated
-
-        do {
-            try task.run() //<--updated
-        }
-        catch { throw error }
-        
-        let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output = String(data: data, encoding: .utf8)!
-        
-        return output
+        print(utils.activeSpaceIdentifier())
     }
 }

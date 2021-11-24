@@ -14,6 +14,7 @@
 		2DBA1DA65313568913DC852D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */; };
 		2DBA1E293860376FFAABF52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1446AB68795FCEB4F37F /* Assets.xcassets */; };
 		2DBA1F72145DB84B840CA4C0 /* HideMyDockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1A98D9663939191567F0 /* HideMyDockUITestsLaunchTests.swift */; };
+		FAD0C5B7274E0B2A00F6D412 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0C5B6274E0B2A00F6D412 /* Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,9 @@
 		2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DBA1F9C6354AEB4F358BBED /* HideMyDock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HideMyDock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD0C5AE274D3AC400F6D412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FAD0C5B5274E0B2A00F6D412 /* HideMyDock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HideMyDock-Bridging-Header.h"; sourceTree = "<group>"; };
+		FAD0C5B6274E0B2A00F6D412 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		FAD0C5B8274E0B5400F6D412 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,9 @@
 				2DBA11104FD6D37DA9692E74 /* Preview Content */,
 				2DBA11BC8C3DE69576B3D51F /* HideMyDockApp.swift */,
 				2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */,
+				FAD0C5B6274E0B2A00F6D412 /* Utils.m */,
+				FAD0C5B5274E0B2A00F6D412 /* HideMyDock-Bridging-Header.h */,
+				FAD0C5B8274E0B5400F6D412 /* Utils.h */,
 			);
 			path = HideMyDock;
 			sourceTree = "<group>";
@@ -193,6 +200,11 @@
 		2DBA1A6241EB4336231BFBDC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+					2DBA1429559477A05C607305 = {
+						LastSwiftMigration = 1310;
+					};
+				};
 			};
 			buildConfigurationList = 2DBA1F46897B07E10E0B113B /* Build configuration list for PBXProject "HideMyDock" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -245,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD0C5B7274E0B2A00F6D412 /* Utils.m in Sources */,
 				2DBA17E8BC2F711FF873B8DA /* HideMyDockApp.swift in Sources */,
 				2DBA1DA65313568913DC852D /* AppDelegate.swift in Sources */,
 			);
@@ -288,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HideMyDock/HideMyDock.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -302,6 +316,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HideMyDock/HideMyDock-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -311,6 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HideMyDock/HideMyDock.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -325,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HideMyDock/HideMyDock-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
