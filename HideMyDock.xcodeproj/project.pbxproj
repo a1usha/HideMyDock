@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DBA114D73F3F2C1B9E577F7 /* HideMyDockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA13154D83A299F8F43776 /* HideMyDockTests.swift */; };
 		2DBA13DF4B11853AC7301413 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1E5CB83B183D7FFB19EC /* Preview Assets.xcassets */; };
-		2DBA161C7F66DC4A027F464F /* HideMyDockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA10D50F51D9F8A3339D24 /* HideMyDockUITests.swift */; };
 		2DBA17E8BC2F711FF873B8DA /* HideMyDockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA11BC8C3DE69576B3D51F /* HideMyDockApp.swift */; };
 		2DBA1DA65313568913DC852D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */; };
 		2DBA1E293860376FFAABF52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1446AB68795FCEB4F37F /* Assets.xcassets */; };
-		2DBA1F72145DB84B840CA4C0 /* HideMyDockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1A98D9663939191567F0 /* HideMyDockUITestsLaunchTests.swift */; };
 		FAD0C5B7274E0B2A00F6D412 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0C5B6274E0B2A00F6D412 /* Utils.m */; };
 		FAD0C5BA274F7BC500F6D412 /* DockUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0C5B9274F7BC500F6D412 /* DockUtils.swift */; };
 /* End PBXBuildFile section */
@@ -36,13 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2DBA10D50F51D9F8A3339D24 /* HideMyDockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideMyDockUITests.swift; sourceTree = "<group>"; };
 		2DBA11BC8C3DE69576B3D51F /* HideMyDockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideMyDockApp.swift; sourceTree = "<group>"; };
-		2DBA13154D83A299F8F43776 /* HideMyDockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideMyDockTests.swift; sourceTree = "<group>"; };
 		2DBA1446AB68795FCEB4F37F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DBA16B5741BEAE1C85801F3 /* HideMyDockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HideMyDockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBA1866605C948386D276D3 /* HideMyDock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HideMyDock.entitlements; sourceTree = "<group>"; };
-		2DBA1A98D9663939191567F0 /* HideMyDockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideMyDockUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2DBA1E5CB83B183D7FFB19EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DBA1F5CD4321F6A273D1DA6 /* HideMyDockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HideMyDockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,8 +96,6 @@
 			children = (
 				2DBA15E675E58E287EC7EE4C /* Products */,
 				2DBA1C333D194226EC0C61A8 /* HideMyDock */,
-				2DBA1EC1F4408A76FAB6C454 /* HideMyDockTests */,
-				2DBA1ECCB554220E36662FD3 /* HideMyDockUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,23 +114,6 @@
 				FAD0C5B9274F7BC500F6D412 /* DockUtils.swift */,
 			);
 			path = HideMyDock;
-			sourceTree = "<group>";
-		};
-		2DBA1EC1F4408A76FAB6C454 /* HideMyDockTests */ = {
-			isa = PBXGroup;
-			children = (
-				2DBA13154D83A299F8F43776 /* HideMyDockTests.swift */,
-			);
-			path = HideMyDockTests;
-			sourceTree = "<group>";
-		};
-		2DBA1ECCB554220E36662FD3 /* HideMyDockUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2DBA10D50F51D9F8A3339D24 /* HideMyDockUITests.swift */,
-				2DBA1A98D9663939191567F0 /* HideMyDockUITestsLaunchTests.swift */,
-			);
-			path = HideMyDockUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DBA114D73F3F2C1B9E577F7 /* HideMyDockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DBA161C7F66DC4A027F464F /* HideMyDockUITests.swift in Sources */,
-				2DBA1F72145DB84B840CA4C0 /* HideMyDockUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
