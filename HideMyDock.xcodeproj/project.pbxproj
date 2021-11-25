@@ -15,6 +15,7 @@
 		2DBA1E293860376FFAABF52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1446AB68795FCEB4F37F /* Assets.xcassets */; };
 		2DBA1F72145DB84B840CA4C0 /* HideMyDockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1A98D9663939191567F0 /* HideMyDockUITestsLaunchTests.swift */; };
 		FAD0C5B7274E0B2A00F6D412 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0C5B6274E0B2A00F6D412 /* Utils.m */; };
+		FAD0C5BA274F7BC500F6D412 /* DockUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0C5B9274F7BC500F6D412 /* DockUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		FAD0C5B5274E0B2A00F6D412 /* HideMyDock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HideMyDock-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAD0C5B6274E0B2A00F6D412 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		FAD0C5B8274E0B5400F6D412 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		FAD0C5B9274F7BC500F6D412 /* DockUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				FAD0C5B6274E0B2A00F6D412 /* Utils.m */,
 				FAD0C5B5274E0B2A00F6D412 /* HideMyDock-Bridging-Header.h */,
 				FAD0C5B8274E0B5400F6D412 /* Utils.h */,
+				FAD0C5B9274F7BC500F6D412 /* DockUtils.swift */,
 			);
 			path = HideMyDock;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD0C5BA274F7BC500F6D412 /* DockUtils.swift in Sources */,
 				FAD0C5B7274E0B2A00F6D412 /* Utils.m in Sources */,
 				2DBA17E8BC2F711FF873B8DA /* HideMyDockApp.swift in Sources */,
 				2DBA1DA65313568913DC852D /* AppDelegate.swift in Sources */,

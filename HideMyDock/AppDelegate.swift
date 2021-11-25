@@ -4,6 +4,7 @@
 
 import Cocoa
 import SwiftUI
+import Foundation
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     
@@ -39,8 +40,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        if let menuButton = statusItem?.button {
-            menuButton.image = NSImage(systemSymbolName: "icloud.and.arrow.up.fill", accessibilityDescription: nil)
+        
+        if (isDockHidden()) {
+            hideDockForDesktop(nil)
+        } else {
+            showDockForDesktop(nil)
         }
         
         constructMenu()
@@ -48,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(self.spaceChange), name: NSWorkspace.activeSpaceDidChangeNotification, object: nil)
     }
     
-    func constructMenu() {
+    private func constructMenu() {
         let menu = NSMenu()
         
         menu.addItem(NSMenuItem(title: "Show Dock", action: #selector(AppDelegate.showDockForDesktop(_:)), keyEquivalent: "s"))
@@ -75,7 +79,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         enableDockAutoHide?.executeAndReturnError(nil)
         
         if let menuButton = statusItem?.button {
-            menuButton.image = NSImage(systemSymbolName: "icloud.and.arrow.down.fill", accessibilityDescription: nil)
+            menuButton.image = NSImage(systemSymbolName: "dock.arrow.down.rectangle", accessibilityDescription: nil)
         }
     }
     
@@ -92,7 +96,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         disableDockAutoHide?.executeAndReturnError(nil)
         
         if let menuButton = statusItem?.button {
-            menuButton.image = NSImage(systemSymbolName: "icloud.and.arrow.up.fill", accessibilityDescription: nil)
+            menuButton.image = NSImage(systemSymbolName: "dock.arrow.up.rectangle", accessibilityDescription: nil)
         }
     }
     
@@ -104,6 +108,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             hideDock()
         } else {
             showDock()
+        }
+    }
+    
+    private func isDockHidden() -> Bool {
+        let dockSize = getDockSize()
+        
+        if dockSize < 25 {
+            return true
+        } else {
+            return false
         }
     }
 }
