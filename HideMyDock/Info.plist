@@ -4,7 +4,5 @@
 <dict>
 	<key>LSUIElement</key>
 	<true/>
-	<key>NSAppleEventsUsageDescription</key>
-	<string>Please allow</string>
 </dict>
 </plist>
