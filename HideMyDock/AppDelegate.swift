@@ -9,19 +9,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusItem: NSStatusItem?
     
-    var enableDockAutoHide = NSAppleScript(source:
+    let enableDockAutoHide = NSAppleScript(source:
     """
     tell application "System Events"
         set autohide of dock preferences to true
     end tell
     """)
     
-    var disableDockAutoHide = NSAppleScript(source:
+    let disableDockAutoHide = NSAppleScript(source:
     """
     tell application "System Events"
         set autohide of dock preferences to false
     end tell
     """)
+    
+    let utils: Utils
+    
+    var spacesToHide: [String] = []
+    
+    override init() {
+        utils = Utils()
+        
+        enableDockAutoHide?.compileAndReturnError(nil)
+        disableDockAutoHide?.compileAndReturnError(nil)
+        
+        super.init()
+    }
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         
@@ -32,21 +45,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         constructMenu()
         
-//        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(self.spaceChange), name: NSWorkspace.activeSpaceDidChangeNotification, object: nil)
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(self.spaceChange), name: NSWorkspace.activeSpaceDidChangeNotification, object: nil)
     }
     
     func constructMenu() {
         let menu = NSMenu()
         
-        menu.addItem(NSMenuItem(title: "Hide Dock", action: #selector(AppDelegate.spaceChange(_:)), keyEquivalent: "h"))
-        menu.addItem(NSMenuItem(title: "Show Dock", action: #selector(AppDelegate.showDock(_:)), keyEquivalent: "s"))
+        menu.addItem(NSMenuItem(title: "Show Dock", action: #selector(AppDelegate.showDockForDesktop(_:)), keyEquivalent: "s"))
+        menu.addItem(NSMenuItem(title: "Hide Dock", action: #selector(AppDelegate.hideDockForDesktop(_:)), keyEquivalent: "h"))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit HideMyDock", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
         statusItem?.menu = menu
     }
     
-    @objc func hideDock(_ sender: Any?) {
+    @objc func hideDockForDesktop(_ sender: Any?) {
+        
+        let spaceId = utils.activeSpaceIdentifier()
+        
+        if (!spacesToHide.contains(spaceId!)) {
+            spacesToHide.append(spaceId!)
+        }
+        
+        hideDock()
+    }
+    
+    private func hideDock() {
+        
         enableDockAutoHide?.executeAndReturnError(nil)
         
         if let menuButton = statusItem?.button {
@@ -54,7 +79,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    @objc func showDock(_ sender: Any?) {
+    @objc func showDockForDesktop(_ sender: Any?) {
+        
+        let spaceId = utils.activeSpaceIdentifier()
+        spacesToHide.removeAll { $0 == spaceId! }
+        
+        showDock()
+    }
+    
+    private func showDock() {
+        
         disableDockAutoHide?.executeAndReturnError(nil)
         
         if let menuButton = statusItem?.button {
@@ -62,9 +96,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    @objc func spaceChange(_ sender: Any?) {
-        let utils = Utils()
+    @objc func spaceChange() {
         
-        print(utils.activeSpaceIdentifier())
+        let spaceId = utils.activeSpaceIdentifier()
+        
+        if (spacesToHide.contains(where: { $0 == spaceId! })) {
+            hideDock()
+        } else {
+            showDock()
+        }
     }
 }
