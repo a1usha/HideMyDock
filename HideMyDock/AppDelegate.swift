@@ -103,6 +103,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func spaceChange() {
         
         let spaceId = utils.activeSpaceIdentifier()
+        if (spaceId == nil) {
+            return
+        }
         
         if (spacesToHide.contains(where: { $0 == spaceId! })) {
             hideDock()
