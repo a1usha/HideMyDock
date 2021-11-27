@@ -6,6 +6,11 @@
 
 A small macOS menubar app designed to hide the dock on selected spaces.
 
+![GitHub all releases](https://img.shields.io/github/downloads/a1usha/HideMyDock/total?color=violet)
+[![GitHub license](https://img.shields.io/github/license/a1usha/HideMyDock)](https://github.com/a1usha/HideMyDock/blob/main/LICENSE)
+![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg?style=flat)
+[![GitHub stars](https://img.shields.io/github/stars/a1usha/HideMyDock)](https://github.com/a1usha/HideMyDock/stargazers)
+
 ## Installation
 
 ### Manually
