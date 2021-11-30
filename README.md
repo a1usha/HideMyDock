@@ -44,5 +44,5 @@ HideMyDock currently supported on macOS 11.0 (Big Sur) and higher.
 ## License
 [MIT License](https://github.com/a1usha/HideMyDock/blob/main/LICENSE)
 
-[![Stargazers repo roster for @a1usha/HideMyDock](https://reporoster.com/stars/USERNAME/REPO_NAME)](https://github.com/a1usha/HideMyDock/stargazers)
+[![Stargazers repo roster for @a1usha/HideMyDock](https://reporoster.com/stars/a1usha/HideMyDock)](https://github.com/a1usha/HideMyDock/stargazers)
 
