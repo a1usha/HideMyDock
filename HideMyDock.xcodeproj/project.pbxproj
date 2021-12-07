@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		2DBA17E8BC2F711FF873B8DA /* HideMyDockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA11BC8C3DE69576B3D51F /* HideMyDockApp.swift */; };
 		2DBA1DA65313568913DC852D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */; };
 		2DBA1E293860376FFAABF52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1446AB68795FCEB4F37F /* Assets.xcassets */; };
+		FA0C8968275F48C1007B8E4D /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = FA0C8967275F48C1007B8E4D /* LaunchAtLogin */; };
 		FAD0C5B7274E0B2A00F6D412 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0C5B6274E0B2A00F6D412 /* Utils.m */; };
 		FAD0C5BA274F7BC500F6D412 /* DockUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0C5B9274F7BC500F6D412 /* DockUtils.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0C8968275F48C1007B8E4D /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,12 +128,16 @@
 				2DBA13E9F064E2484AF6E3AD /* Sources */,
 				2DBA175B9CE02E44ED20676A /* Frameworks */,
 				2DBA1A9074F0085AE1817BB9 /* Resources */,
+				FA0C8969275F48F5007B8E4D /* Copy “Launch at Login Helper” */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HideMyDock;
+			packageProductDependencies = (
+				FA0C8967275F48C1007B8E4D /* LaunchAtLogin */,
+			);
 			productName = HideMyDock;
 			productReference = 2DBA1F9C6354AEB4F358BBED /* HideMyDock.app */;
 			productType = "com.apple.product-type.application";
@@ -193,6 +199,9 @@
 				en,
 			);
 			mainGroup = 2DBA18569CEE1491B66EF794;
+			packageReferences = (
+				FA0C8966275F48C1007B8E4D /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
 			productRefGroup = 2DBA15E675E58E287EC7EE4C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,6 +238,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA0C8969275F48F5007B8E4D /* Copy “Launch at Login Helper” */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy “Launch at Login Helper”";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DBA13E9F064E2484AF6E3AD /* Sources */ = {
@@ -288,8 +318,11 @@
 				INFOPLIST_FILE = HideMyDock/Info.plist;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Please allow";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MARKETING_VERSION = 1.0.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -315,8 +348,11 @@
 				INFOPLIST_FILE = HideMyDock/Info.plist;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Please allow";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MARKETING_VERSION = 1.0.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -331,7 +367,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDockUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,7 +491,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -462,7 +503,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDockTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,7 +523,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDockUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -495,7 +544,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alusha.HideMyDockTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,6 +598,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA0C8966275F48C1007B8E4D /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA0C8967275F48C1007B8E4D /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA0C8966275F48C1007B8E4D /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2DBA1A6241EB4336231BFBDC /* Project object */;
 }

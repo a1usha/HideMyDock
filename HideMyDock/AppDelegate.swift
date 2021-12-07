@@ -5,6 +5,7 @@
 import Cocoa
 import SwiftUI
 import Foundation
+import LaunchAtLogin
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     
@@ -57,10 +58,34 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         menu.addItem(NSMenuItem(title: "Show Dock", action: #selector(AppDelegate.showDockForDesktop(_:)), keyEquivalent: "s"))
         menu.addItem(NSMenuItem(title: "Hide Dock", action: #selector(AppDelegate.hideDockForDesktop(_:)), keyEquivalent: "h"))
+        
         menu.addItem(NSMenuItem.separator())
+        
+        let launchAtLoginMenuItem = NSMenuItem(title: "Launch at login", action:
+                                                #selector(AppDelegate.launchAtLogin(_ :)), keyEquivalent: "l")
+        
+        launchAtLoginMenuItem.state = LaunchAtLogin.isEnabled ? NSControl.StateValue.on : NSControl.StateValue.off
+        
+        menu.addItem(launchAtLoginMenuItem)
+        
+        menu.addItem(NSMenuItem.separator())
+        
         menu.addItem(NSMenuItem(title: "Quit HideMyDock", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
         statusItem?.menu = menu
+    }
+    
+    @objc func launchAtLogin(_ sender: Any?) {
+        
+        let menuItem = sender as! NSMenuItem
+        
+        if (menuItem.state == NSControl.StateValue.off) {
+            LaunchAtLogin.isEnabled = true
+            menuItem.state = NSControl.StateValue.on
+        } else {
+            LaunchAtLogin.isEnabled = false
+            menuItem.state = NSControl.StateValue.off
+        }
     }
     
     @objc func hideDockForDesktop(_ sender: Any?) {
