@@ -10,31 +10,16 @@ import LaunchAtLogin
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusItem: NSStatusItem?
-    
-    let enableDockAutoHide = NSAppleScript(source:
-    """
-    tell application "System Events"
-        set autohide of dock preferences to true
-    end tell
-    """)
-    
-    let disableDockAutoHide = NSAppleScript(source:
-    """
-    tell application "System Events"
-        set autohide of dock preferences to false
-    end tell
-    """)
-    
+        
     let utils: Utils
+    let dockUtils: DockUtils
     
     var spacesToHide: [String] = []
     
     override init() {
         utils = Utils()
-        
-        enableDockAutoHide?.compileAndReturnError(nil)
-        disableDockAutoHide?.compileAndReturnError(nil)
-        
+        dockUtils = DockUtils()
+                
         super.init()
     }
     
@@ -42,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         
-        if (isDockHidden()) {
+        if (dockUtils.isDockHidden()) {
             hideDockForDesktop(nil)
         } else {
             showDockForDesktop(nil)
@@ -101,7 +86,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func hideDock() {
         
-        enableDockAutoHide?.executeAndReturnError(nil)
+        dockUtils.enableDockAutoHide?.executeAndReturnError(nil)
         
         if let menuButton = statusItem?.button {
             menuButton.image = NSImage(systemSymbolName: "dock.arrow.down.rectangle", accessibilityDescription: nil)
@@ -118,7 +103,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func showDock() {
         
-        disableDockAutoHide?.executeAndReturnError(nil)
+        dockUtils.disableDockAutoHide?.executeAndReturnError(nil)
         
         if let menuButton = statusItem?.button {
             menuButton.image = NSImage(systemSymbolName: "dock.arrow.up.rectangle", accessibilityDescription: nil)
@@ -136,16 +121,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             hideDock()
         } else {
             showDock()
-        }
-    }
-    
-    private func isDockHidden() -> Bool {
-        let dockSize = getDockSize()
-        
-        if dockSize < 25 {
-            return true
-        } else {
-            return false
         }
     }
 }

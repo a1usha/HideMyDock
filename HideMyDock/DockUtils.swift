@@ -10,45 +10,67 @@
 import Foundation
 import Cocoa
 
-enum WBDockPosition: Int {
-    case bottom = 0
-    case left = 1
-    case right = 2
-}
-
-func getDockPosition() -> WBDockPosition {
-    if NSScreen.main!.visibleFrame.origin.y == 0 {
-        if NSScreen.main!.visibleFrame.origin.x == 0 {
-            return .right
-        } else {
-            return .left
-        }
-    } else {
-        return .bottom
-    }
-}
-
-func getDockSize() -> CGFloat {
-    let dockPosition = getDockPosition()
-    switch dockPosition {
-    case .right:
-        let size = NSScreen.main!.frame.width - NSScreen.main!.visibleFrame.width
-        return size
-    case .left:
-        let size = NSScreen.main!.visibleFrame.origin.x
-        return size
-    case .bottom:
-        let size = NSScreen.main!.visibleFrame.origin.y
-        return size
-    }
-}
-
-func isDockHidden() -> Bool {
-    let dockSize = getDockSize()
+class DockUtils {
     
-    if dockSize < 25 {
-        return true
-    } else {
-        return false
+    let enableDockAutoHide = NSAppleScript(source:
+    """
+    tell application "System Events"
+        set autohide of dock preferences to true
+    end tell
+    """)
+    
+    let disableDockAutoHide = NSAppleScript(source:
+    """
+    tell application "System Events"
+        set autohide of dock preferences to false
+    end tell
+    """)
+    
+    enum WBDockPosition: Int {
+        case bottom = 0
+        case left = 1
+        case right = 2
+    }
+    
+    init() {
+        enableDockAutoHide?.compileAndReturnError(nil)
+        disableDockAutoHide?.compileAndReturnError(nil)
+    }
+    
+    func getDockPosition() -> WBDockPosition {
+        if NSScreen.main!.visibleFrame.origin.y == 0 {
+            if NSScreen.main!.visibleFrame.origin.x == 0 {
+                return .right
+            } else {
+                return .left
+            }
+        } else {
+            return .bottom
+        }
+    }
+    
+    func getDockSize() -> CGFloat {
+        let dockPosition = getDockPosition()
+        switch dockPosition {
+        case .right:
+            let size = NSScreen.main!.frame.width - NSScreen.main!.visibleFrame.width
+            return size
+        case .left:
+            let size = NSScreen.main!.visibleFrame.origin.x
+            return size
+        case .bottom:
+            let size = NSScreen.main!.visibleFrame.origin.y
+            return size
+        }
+    }
+    
+    func isDockHidden() -> Bool {
+        let dockSize = getDockSize()
+        
+        if dockSize < 25 {
+            return true
+        } else {
+            return false
+        }
     }
 }
