@@ -12,6 +12,7 @@
 		2DBA1DA65313568913DC852D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */; };
 		2DBA1E293860376FFAABF52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1446AB68795FCEB4F37F /* Assets.xcassets */; };
 		FA0C8968275F48C1007B8E4D /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = FA0C8967275F48C1007B8E4D /* LaunchAtLogin */; };
+		FAB9C2D427A801C400990736 /* MenuBarUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9C2D327A801C400990736 /* MenuBarUtils.swift */; };
 		FAD0C5B7274E0B2A00F6D412 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0C5B6274E0B2A00F6D412 /* Utils.m */; };
 		FAD0C5BA274F7BC500F6D412 /* DockUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0C5B9274F7BC500F6D412 /* DockUtils.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		2DBA1F5CD4321F6A273D1DA6 /* HideMyDockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HideMyDockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBA1F7EC427AD231C0A4ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DBA1F9C6354AEB4F358BBED /* HideMyDock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HideMyDock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB9C2D327A801C400990736 /* MenuBarUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarUtils.swift; sourceTree = "<group>"; };
 		FAD0C5AE274D3AC400F6D412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FAD0C5B5274E0B2A00F6D412 /* HideMyDock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HideMyDock-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAD0C5B6274E0B2A00F6D412 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				FAD0C5B5274E0B2A00F6D412 /* HideMyDock-Bridging-Header.h */,
 				FAD0C5B8274E0B5400F6D412 /* Utils.h */,
 				FAD0C5B9274F7BC500F6D412 /* DockUtils.swift */,
+				FAB9C2D327A801C400990736 /* MenuBarUtils.swift */,
 			);
 			path = HideMyDock;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD0C5BA274F7BC500F6D412 /* DockUtils.swift in Sources */,
+				FAB9C2D427A801C400990736 /* MenuBarUtils.swift in Sources */,
 				FAD0C5B7274E0B2A00F6D412 /* Utils.m in Sources */,
 				2DBA17E8BC2F711FF873B8DA /* HideMyDockApp.swift in Sources */,
 				2DBA1DA65313568913DC852D /* AppDelegate.swift in Sources */,

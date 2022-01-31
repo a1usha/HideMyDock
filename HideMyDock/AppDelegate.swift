@@ -13,12 +13,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     let utils: Utils
     let dockUtils: DockUtils
+    let menuBarUtils: MenuBarUtils
     
     var spacesToHide: [String] = []
     
     override init() {
         utils = Utils()
         dockUtils = DockUtils()
+        menuBarUtils = MenuBarUtils()
                 
         super.init()
     }
@@ -111,6 +113,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func spaceChange() {
+        
+        print(menuBarUtils.isMenuBarHidden())
         
         let spaceId = utils.activeSpaceIdentifier()
         if (spaceId == nil) {
