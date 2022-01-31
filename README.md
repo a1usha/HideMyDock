@@ -35,6 +35,7 @@ HideMyDock currently supported on macOS 11.0 (Big Sur) and higher.
 
 ## TODO
 - [ ] Detect `⌘⌥d` shortcut and apply settings
+- [ ] Hide menubar
 - [X] Start at login feature
 
 
