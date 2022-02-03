@@ -15,10 +15,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let dockUtils: DockUtils
     let menuBarUtils: MenuBarUtils
     
-    var spacesToHide: [String] = []
+    var spacesToHideDock: [String] = []
+    var spacesToHideMenuBar: [String] = []
     
     override init() {
         utils = Utils()
+        
         dockUtils = DockUtils()
         menuBarUtils = MenuBarUtils()
                 
@@ -35,6 +37,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             showDockForDesktop(nil)
         }
         
+        if (menuBarUtils.isMenuBarHidden()) {
+            hideMenuBarForDesktop(nil)
+        } else {
+            showMenuBarForDesktop(nil)
+        }
+        
         constructMenu()
         
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(self.spaceChange), name: NSWorkspace.activeSpaceDidChangeNotification, object: nil)
@@ -43,8 +51,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func constructMenu() {
         let menu = NSMenu()
         
-        menu.addItem(NSMenuItem(title: "Show Dock", action: #selector(AppDelegate.showDockForDesktop(_:)), keyEquivalent: "s"))
-        menu.addItem(NSMenuItem(title: "Hide Dock", action: #selector(AppDelegate.hideDockForDesktop(_:)), keyEquivalent: "h"))
+        menu.addItem(NSMenuItem(title: "Show All", action: #selector(AppDelegate.showAll(_:)), keyEquivalent: "a"))
+        menu.addItem(NSMenuItem(title: "Hide All", action: #selector(AppDelegate.hideAll(_:)), keyEquivalent: "z"))
+        
+        menu.addItem(NSMenuItem.separator())
+        
+        menu.addItem(NSMenuItem(title: "Show Dock", action: #selector(AppDelegate.showDockForDesktop(_:)), keyEquivalent: "d"))
+        menu.addItem(NSMenuItem(title: "Hide Dock", action: #selector(AppDelegate.hideDockForDesktop(_:)), keyEquivalent: "c"))
+        
+        menu.addItem(NSMenuItem.separator())
+        
+        menu.addItem(NSMenuItem(title: "Show Menu Bar", action: #selector(AppDelegate.showMenuBarForDesktop(_:)), keyEquivalent: "m"))
+        menu.addItem(NSMenuItem(title: "Hide Menu Bar", action: #selector(AppDelegate.hideMenuBarForDesktop(_:)), keyEquivalent: "n"))
         
         menu.addItem(NSMenuItem.separator())
         
@@ -75,12 +93,49 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @objc func showAll(_ sender: Any?) {
+        showMenuBarForDesktop(nil)
+        showDockForDesktop(nil)
+    }
+    
+    @objc func hideAll(_ sender: Any?) {
+        hideMenuBarForDesktop(nil)
+        hideDockForDesktop(nil)
+    }
+    
+    @objc func showMenuBarForDesktop(_ sender: Any?) {
+        
+        let spaceId = utils.activeSpaceIdentifier()
+        spacesToHideMenuBar.removeAll { $0 == spaceId! }
+        
+        showMenuBar()
+    }
+    
+    private func showMenuBar() {
+        menuBarUtils.disableMenuBarAutoHide?.executeAndReturnError(nil)
+    }
+    
+    @objc func hideMenuBarForDesktop(_ sender: Any?) {
+        
+        let spaceId = utils.activeSpaceIdentifier()
+        
+        if (!spacesToHideMenuBar.contains(spaceId!)) {
+            spacesToHideMenuBar.append(spaceId!)
+        }
+        
+        hideMenuBar()
+    }
+    
+    private func hideMenuBar() {
+        menuBarUtils.enableMenuBarAutoHide?.executeAndReturnError(nil)
+    }
+    
     @objc func hideDockForDesktop(_ sender: Any?) {
         
         let spaceId = utils.activeSpaceIdentifier()
         
-        if (!spacesToHide.contains(spaceId!)) {
-            spacesToHide.append(spaceId!)
+        if (!spacesToHideDock.contains(spaceId!)) {
+            spacesToHideDock.append(spaceId!)
         }
         
         hideDock()
@@ -98,7 +153,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func showDockForDesktop(_ sender: Any?) {
         
         let spaceId = utils.activeSpaceIdentifier()
-        spacesToHide.removeAll { $0 == spaceId! }
+        spacesToHideDock.removeAll { $0 == spaceId! }
         
         showDock()
     }
@@ -114,17 +169,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func spaceChange() {
         
-        print(menuBarUtils.isMenuBarHidden())
-        
         let spaceId = utils.activeSpaceIdentifier()
         if (spaceId == nil) {
             return
         }
         
-        if (spacesToHide.contains(where: { $0 == spaceId! })) {
+        if (spacesToHideDock.contains(where: { $0 == spaceId! })) {
             hideDock()
         } else {
             showDock()
+        }
+        
+        if (spacesToHideMenuBar.contains(where: { $0 == spaceId! })) {
+            hideMenuBar()
+        } else {
+            showMenuBar()
         }
     }
 }
