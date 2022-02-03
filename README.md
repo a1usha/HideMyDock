@@ -4,7 +4,7 @@
   <img src="resources/cat-4.png" />
 </p>
 
-A small macOS menubar app designed to hide the dock on selected spaces.
+A small macOS menubar app designed to hide the dock and menu bar on selected spaces. 🥷
 
 ![GitHub all releases](https://img.shields.io/github/downloads/a1usha/HideMyDock/total?color=violet)
 [![GitHub license](https://img.shields.io/github/license/a1usha/HideMyDock)](https://github.com/a1usha/HideMyDock/blob/main/LICENSE)
@@ -23,10 +23,10 @@ Coming soon...
 
 ## Features
 
-By default, on macOS, you can only hide the dock for all virtual desktops (spaces). This app will allow you to turn the dock off or on for certain virtual desktops as in full screen mode.
+By default, on macOS, you can only hide the dock or menu bar for all virtual desktops (spaces). This app will allow you to turn the dock and menu bar off or on for certain virtual desktops as in full screen mode.
 
 <p align="center">
-  <img src="resources/demo.gif" />
+  <img src="resources/demo2.gif" />
 </p>
 
 ## Requirements
@@ -34,10 +34,10 @@ By default, on macOS, you can only hide the dock for all virtual desktops (space
 HideMyDock currently supported on macOS 11.0 (Big Sur) and higher.
 
 ## TODO
-- [ ] Detect `⌘⌥d` shortcut and apply settings
-- [ ] Hide menubar
+- [X] Hide menubar
 - [X] Start at login feature
 
+Your ideas and suggestions are welcome!
 
 ## Credits
 
